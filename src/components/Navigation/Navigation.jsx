@@ -89,8 +89,8 @@ function Navigation() {
         </>
         :
         <div className="nav__auth-wrapper">
-          <NavLink to="/signup" className="nav__btn">Регистрация</NavLink>
-          <NavLink to="/signin" className="nav__btn nav__btn_accent">Войти</NavLink>
+          <NavLink to="/signup" className="nav__btn nav__link">Регистрация</NavLink>
+          <NavLink to="/signin" className="nav__btn nav__btn_accent nav__link">Войти</NavLink>
         </div>
       }
     </nav >

@@ -13,34 +13,32 @@ import './App.css';
 
 function App() {
   return (
-    <div className='page'>
-      <Router basename={process.env.PUBLIC_URL}>
-        <div className="page__wrapper">
-          <Header></Header>
-          <Switch>
-            <Route path="/signin">
-              <Login></Login>
-            </Route>
-            <Route path='/signup'>
-              <Register></Register>
-            </Route>
-            <Route path='/profile'>
-              <Profile></Profile>
-            </Route>
-            <Route path="/saved-movies">
-              <SavedMovies></SavedMovies>
-            </Route>
-            <Route path='/movies'>
-              <Movies></Movies>
-            </Route>
-            <Route exact path='/'>
-              <Main></Main>
-            </Route>
-          </Switch>
-          <Footer></Footer>
-        </div>
-      </Router>
-    </div>
+    <Router basename={process.env.PUBLIC_URL}>
+      <div className="page">
+        <Header></Header>
+        <Switch>
+          <Route path="/signin">
+            <Login></Login>
+          </Route>
+          <Route path='/signup'>
+            <Register></Register>
+          </Route>
+          <Route path='/profile'>
+            <Profile></Profile>
+          </Route>
+          <Route path="/saved-movies">
+            <SavedMovies></SavedMovies>
+          </Route>
+          <Route path='/movies'>
+            <Movies></Movies>
+          </Route>
+          <Route exact path='/'>
+            <Main></Main>
+          </Route>
+        </Switch>
+        <Footer></Footer>
+      </div>
+    </Router>
   );
 }
 
