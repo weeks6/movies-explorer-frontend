@@ -4,7 +4,7 @@ import './Footer.css'
 function Footer() {
 
   const location = useLocation()
-  const hideFooter = ['/signin', '/signup']
+  const hideFooter = ['/signin', '/signup', '/profile']
 
   return (
     !hideFooter.includes(location.pathname) && <footer className="footer">
