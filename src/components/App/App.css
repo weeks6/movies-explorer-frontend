@@ -1,10 +1,16 @@
+/* shared */
+@import url('../Form/Form.css');
+@import url('../WrapContainer/WrapContainer.css');
+
 :root {
   --color-white: #fff;
   --color-black: black;
   --color-light-gray: #eeeeee;
   --color-secondary-gray: #a0a0a0;
   --color-gray-3: #e8e8e8;
+  --color-gray-4: #f9f9f9;
   --color-accent: #2be080;
+  --color-warning: #ee3465;
 }
 
 .page {

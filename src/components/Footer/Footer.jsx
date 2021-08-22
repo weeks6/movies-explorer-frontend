@@ -1,9 +1,13 @@
+import { useLocation } from 'react-router-dom'
 import './Footer.css'
 
 function Footer() {
 
+  const location = useLocation()
+  const hideFooter = ['/signin', '/signup']
+
   return (
-    <footer className="footer">
+    !hideFooter.includes(location.pathname) && <footer className="footer">
       <div className="footer__container container">
         <span className="footer__misc footer__misc-divider">Учебный проект Яндекс.Практикум х BeatFilm.</span>
         <ul className="footer__links">

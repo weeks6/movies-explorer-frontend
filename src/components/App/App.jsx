@@ -10,8 +10,10 @@ import Register from "../Register/Register"
 import Login from "../Login/Login"
 
 import './App.css';
+import NotFound from '../NotFound/NotFound';
 
 function App() {
+
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <div className="page">
@@ -34,6 +36,9 @@ function App() {
           </Route>
           <Route exact path='/'>
             <Main></Main>
+          </Route>
+          <Route path="*">
+            <NotFound />
           </Route>
         </Switch>
         <Footer></Footer>
