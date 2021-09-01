@@ -1,0 +1,236 @@
+.nav {
+  overflow: hidden;
+}
+
+.nav__menu {
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+}
+
+.nav__menu-icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: transparent;
+}
+
+.nav__menu-icon_burger {
+  width: 22px;
+  height: 20.5px;
+  background-image: url('../../images/icon-burger.svg');
+}
+
+.nav__menu-icon_cross {
+  width: 32px;
+  height: 32px;
+  background-image: url('../../images/icon-cross.svg');
+}
+
+.nav__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 520px;
+  position: absolute;
+  z-index: 2000;
+  right: 0;
+  top: 0;
+  min-height: 100vh;
+  background-color: var(--color-white);
+  transform: translateX(100%);
+  transition: 0.3s ease-in-out;
+}
+
+.nav__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-black);
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.nav__wrapper {
+  top: 0;
+  left: 0;
+  position: fixed;
+  min-height: 100vh;
+  width: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.nav__wrapper_active {
+  pointer-events: all;
+}
+
+.nav__wrapper_active .nav__container {
+  transform: translateX(0);
+}
+
+.nav__wrapper_active .nav__overlay {
+  opacity: 0.3;
+}
+
+.nav__list {
+  margin-left: 14px;
+  margin-right: 14px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.nav__list-item {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-black);
+  text-decoration: none;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* .nav__list-item:focus-visible {
+  outline-color: black;
+} */
+
+.nav__list-item .nav__list-item-text::after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: var(--color-black);
+  transform: scaleX(0);
+  transition: 0.3s ease-in-out;
+}
+
+.nav__list-item_active .nav__list-item-text::after {
+  transform: scaleX(1);
+}
+
+.nav__list-item-text {
+  position: relative;
+}
+
+.nav__header {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 14px;
+  margin-right: 14px;
+  margin-bottom: 90px;
+}
+
+.nav__menu_close {
+  align-self: flex-end;
+  width: 32px;
+  height: 32px;
+}
+
+.nav__auth-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.nav__btn {
+  margin-left: 30px;
+}
+
+.nav__link {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+.nav__btn_accent {
+  background-color: var(--color-accent);
+  border-radius: 3px;
+  padding: 8px 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.nav__btn_accent:hover {
+  filter: brightness(1.1);
+}
+
+@media screen and (min-width: 768px) {
+  .nav__list-item {
+    margin-bottom: 28px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .nav__menu {
+    display: none;
+  }
+
+  .nav__wrapper {
+    position: static;
+    min-height: auto;
+    left: auto;
+    top: auto;
+    pointer-events: all;
+  }
+
+  .nav__container {
+    min-height: auto;
+    position: static;
+    transform: translate(0);
+  }
+
+  .nav__header {
+    display: none;
+  }
+
+  .nav__overlay {
+    display: none;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    align-items: center;
+    flex-grow: auto;
+  }
+
+  .nav__list-item {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  .nav__list-item_main {
+    display: none;
+  }
+
+  .nav__list-item_active .nav__list-item-text::after {
+    transform: scaleX(0);
+  }
+
+  .nav__list-item_active .nav__list-item-text {
+    font-weight: 500;
+  }
+
+  .nav__list-item-text {
+    font-weight: normal;
+  }
+}

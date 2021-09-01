@@ -1,0 +1,23 @@
+.logo {
+  width: 38px;
+  height: 38px;
+  background-image: url('../../images/logo.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.logo__link {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.logo__screen-reader {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
